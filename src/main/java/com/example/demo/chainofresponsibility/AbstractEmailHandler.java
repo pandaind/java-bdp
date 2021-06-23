@@ -37,8 +37,7 @@ public abstract class AbstractEmailHandler implements UniversityEmailHandler {
       }
     }
 
-
-     // Check to see if email can be processed by the current email handler based on keyword match
+    // Check to see if email can be processed by the current email handler based on keyword match
 
     if (keyWordFound) {
       processEmailFinal(emailText);
