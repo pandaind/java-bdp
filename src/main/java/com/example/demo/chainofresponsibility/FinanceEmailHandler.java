@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class FinanceEmailHandler extends AbstractEmailHandler {
   @Override
   protected String[] keyWords() {
-    return new String[]{"Money","Finance","FINANCE"};
+    return new String[] {"Money", "Finance", "FINANCE"};
   }
 
   @Override

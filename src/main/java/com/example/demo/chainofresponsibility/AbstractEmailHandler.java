@@ -30,20 +30,20 @@ public abstract class AbstractEmailHandler implements UniversityEmailHandler {
       keyWordFound = true;
     } else {
       for (String oneKeyword : keyWords()) {
-        if (emailText.indexOf(oneKeyword) >= 0) {
+        if (emailText.contains(oneKeyword)) {
           keyWordFound = true; // change value if match is found
           break; // leave loop if match is found
         }
       }
     }
 
-    /**
-     * Check to see if email can be processed by the current email handler based on keyword match
-     */
+
+     // Check to see if email can be processed by the current email handler based on keyword match
+
     if (keyWordFound) {
       processEmailFinal(emailText);
     } else {
-      /** Pass along the chain if the email is not processed by the current email handler */
+      // Pass along the chain if the email is not processed by the current email handler
       theNextHandlerInTheChain.processEmailHandler(emailText);
     }
   }

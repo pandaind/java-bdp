@@ -13,15 +13,14 @@ public class JavaBdpApplication implements CommandLineRunner {
 
   private Logger log = LoggerFactory.getLogger(this.getClass());
 
-  @Autowired
-  private UniversityEmailHandler emailHandler;
+  @Autowired private UniversityEmailHandler emailHandler;
 
   public static void main(String[] args) {
     SpringApplication.run(JavaBdpApplication.class, args);
   }
 
   @Override
-  public void run(String... args) throws Exception {
+  public void run(String... args) {
     // chain of responsibility
     emailHandler.handleEmail("Money sent 1000 dollar");
     emailHandler.handleEmail("");

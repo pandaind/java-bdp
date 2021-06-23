@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class AdminEmailHandler extends AbstractEmailHandler {
   @Override
   protected String[] keyWords() {
-    return new String[]{"Admin,admin"};
+    return new String[] {"Admin,admin"};
   }
 
   @Override
