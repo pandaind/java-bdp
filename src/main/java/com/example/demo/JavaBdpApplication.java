@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.chainofresponsibility.UniversityEmailHandler;
+import com.example.demo.command.ControlBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ public class JavaBdpApplication implements CommandLineRunner {
   private Logger log = LoggerFactory.getLogger(this.getClass());
 
   @Autowired private UniversityEmailHandler emailHandler;
+  @Autowired private ControlBox controlBox;
 
   public static void main(String[] args) {
     SpringApplication.run(JavaBdpApplication.class, args);
@@ -25,5 +27,12 @@ public class JavaBdpApplication implements CommandLineRunner {
     emailHandler.handleEmail("Money sent 1000 dollar");
     emailHandler.handleEmail("");
     emailHandler.handleEmail("I am from Batch 2012");
+
+    // command
+    controlBox.powerOn();
+    controlBox.sliderIncrease();
+    controlBox.sliderIncrease();
+    controlBox.sliderDecrease();
+    controlBox.powerOff();
   }
 }
