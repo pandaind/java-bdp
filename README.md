@@ -37,5 +37,3 @@
 | State pattern                   |                         |
 | Strategy pattern                |                         |
 | Visitor pattern                 |                         |
-
-
