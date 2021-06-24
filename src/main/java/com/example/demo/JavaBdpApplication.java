@@ -13,6 +13,8 @@ import com.example.demo.nullobject.TrainStatusFactory;
 import com.example.demo.observer.NoticeBoard;
 import com.example.demo.observer.OfficeRoom;
 import java.util.List;
+
+import com.example.demo.state.Runner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -95,5 +97,8 @@ public class JavaBdpApplication implements CommandLineRunner {
 
     officeRoom.removeObserver(playground);
     officeRoom.setUnreadMessages(6);
+
+    log.info("********** state ***********");
+    Runner.main(new String[]{});
   }
 }
