@@ -1,7 +1,7 @@
 package com.example.demo.state;
 
-public class Runner {
-    public static void main(String[] args) {
+public class StateClient {
+    public static void run() {
 
         PrinterOffline initialPrinterState = new PrinterOffline();
         Printer printer = new Printer(initialPrinterState);
