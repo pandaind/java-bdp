@@ -16,6 +16,10 @@ import java.util.List;
 
 import com.example.demo.state.StateClient;
 import com.example.demo.strategy.StrategyClient;
+import com.example.demo.template.AbstractJuice;
+import com.example.demo.template.AppleJuice;
+import com.example.demo.template.MixJuice;
+import com.example.demo.template.OrangeJuice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,5 +108,15 @@ public class JavaBdpApplication implements CommandLineRunner {
 
     log.info("********** strategy ***********");
     StrategyClient.run(5);
+
+    log.info("********** template ***********");
+    AbstractJuice juice = new MixJuice();
+    juice.prepare();
+    juice = new AppleJuice();
+    juice.prepare();
+    juice = new OrangeJuice();
+    juice.prepare();
+
+
   }
 }
