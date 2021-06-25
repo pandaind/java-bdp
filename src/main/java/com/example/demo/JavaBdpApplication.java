@@ -20,6 +20,7 @@ import com.example.demo.template.AbstractJuice;
 import com.example.demo.template.AppleJuice;
 import com.example.demo.template.MixJuice;
 import com.example.demo.template.OrangeJuice;
+import com.example.demo.visitor.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,6 +118,13 @@ public class JavaBdpApplication implements CommandLineRunner {
     juice = new OrangeJuice();
     juice.prepare();
 
+    log.info("********** visitor ***********");
+    Subject subject = new Maths();
+    subject.teach(); // normal subject .. so teach
+
+    subject = new Aviation();
+    VisitingFaculty visitor = new ProfX();
+    subject.acceptVisitingFacultyToTeach(visitor); // advance subject so delegate
 
   }
 }
