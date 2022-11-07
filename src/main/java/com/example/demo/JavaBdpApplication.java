@@ -12,8 +12,6 @@ import com.example.demo.nullobject.TrainStatus;
 import com.example.demo.nullobject.TrainStatusFactory;
 import com.example.demo.observer.NoticeBoard;
 import com.example.demo.observer.OfficeRoom;
-import java.util.List;
-
 import com.example.demo.state.StateClient;
 import com.example.demo.strategy.StrategyClient;
 import com.example.demo.template.AbstractJuice;
@@ -21,6 +19,7 @@ import com.example.demo.template.AppleJuice;
 import com.example.demo.template.MixJuice;
 import com.example.demo.template.OrangeJuice;
 import com.example.demo.visitor.*;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,6 +124,5 @@ public class JavaBdpApplication implements CommandLineRunner {
     subject = new Aviation();
     VisitingFaculty visitor = new ProfX();
     subject.acceptVisitingFacultyToTeach(visitor); // advance subject so delegate
-
   }
 }

@@ -7,4 +7,3 @@ public interface VisitingFaculty {
 
   void teach(Maths maths);
 }
-

@@ -7,4 +7,3 @@ public abstract class Subject {
     System.out.println("IN-HOUSE Faculty teaching " + this.getClass().getSimpleName() + " subject");
   }
 }
-
